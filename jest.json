@@ -1,0 +1,27 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".*\\.spec\\.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+  "coverageDirectory": "../coverage",
+  "testTimeout": 30000,
+  "moduleNameMapper": {
+    "@api": "<rootDir>/src/api/api.module.ts",
+    "@filters": "<rootDir>/src/common/filters/index.ts",
+    "@config/server": "<rootDir>/src/config/index.ts",
+    "@config/swagger": "<rootDir>/src/config/swagger/swagger.ts",
+    "@config/typeorm": "<rootDir>/src/config/typeorm/typeorm.config.ts",
+    "@database": "<rootDir>/src/database/database.module.ts"
+  },
+  "globals": {
+    "ts-jest": {
+      "tsconfig": "<rootDir>/tsconfig.json"
+    }
+  }
+}
